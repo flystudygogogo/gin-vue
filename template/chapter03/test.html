@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+{{define "chapter03/test.html"}}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+模板语法
+<br>
+<!--{{.}}-->
+
+{{.article.Id}}
+{{.article.Title}}
+{{.article.Desc}}<br>
+
+{{with .article}}
+    {{.Id}}
+    {{.Title}}
+    {{.Desc}}
+{{end}}
+
+
+
+{{.nowTime.Format "2006/01/02 15:04:05"}}
+
+{{/*这是注释*/}}<br>
+
+{{js "<script>alert(111)</script>"}}<br>
+
+{{add 5 6}}
+
+<br>
+{{subStr "wqfw" 9}} <br>
+
+{{safe "<a href='https://www.baidu.com/'>百度</a> "}}
+{{end}}
+</body>
+</html>
+
